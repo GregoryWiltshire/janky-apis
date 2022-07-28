@@ -5,7 +5,7 @@ WAIT_SECONDS = 1
 
 
 def _result_is_none(x):
-    return not bool(x).conjugate()
+    return x is None
 
 @retry(
     retry=retry_if_result(_result_is_none), 
